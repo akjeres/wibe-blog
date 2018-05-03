@@ -1,0 +1,131 @@
+@import "_variables";
+
+  #footer{
+    background: #222;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+  #footer .content{
+    height: 100%;
+  }
+  #f_logo{
+    float: left;
+    height: 25px;
+    width: 140px;
+    background-image: url(/data/img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    left: -15px;
+  }
+  #f_text{
+    float: left;
+    width: 910px;
+    color: #b39c72;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'GOTHAPROBOLD';
+  }
+  #f_button{
+    color: #fff;
+    width: 148px;
+    height: 40px;
+    float: right;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: solid 1px #b39c72;
+    transition: all .3s;
+  }
+  #f_button:hover{
+    color: #000;
+    background: #b39c72;
+    border: solid 1px #b39c72;
+  }
+  #f_one_row_contacts{
+    color: #fff;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: right;
+    display: inline-block;
+    font-family: 'GOTHAPROREG';
+    @include link;
+  }
+  #f_row_two{
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    display: inline-block;
+  }
+  #f_two_row_contacts_map{
+    color: #fff;
+    float: left;
+    width: 300px;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'GOTHAPROREG';
+  }
+  #f_two_row_contacts_phone{
+    color: #fff;
+    float: right;
+    width: 300px;
+    font-size: 15px;
+    white-space: pre;
+    text-align: right;
+    font-family: 'GOTHAPROREG';
+    height: 34px;
+    position: relative;
+  }
+  #f_two_row_contacts_phone a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    @include link;
+    &:last-child {
+      top: 17px;
+    }
+  }
+  #sequrity{
+    color: #fff;
+    font-size: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: bottom;
+    font-family: 'GOTHAPROREG';
+    @include link;
+  }
+  #f_row_three{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .f_social{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(/data/img/social.png);
+  }
+  #fs_facebook{
+    background-position: 5px 2px;
+  }
+  #fs_instagram{
+    background-position: -15px 2px;
+  }
+  #fs_linkein{
+    background-position: -37px 2px;
+  }
+  #fs_behance{
+    background-position: -62px 2px;
+  }
+  @media (max-width:1200px){
+    #footer{
+      display: none;
+    }
+  }

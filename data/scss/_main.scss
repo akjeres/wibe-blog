@@ -1,0 +1,126 @@
+@import "_variables";
+
+main {
+  background: $bkg;
+  .submenu {
+    background: #fff;
+    height: auto;
+    .row {
+      margin: auto;
+    }
+    &-item {
+      padding: 17px 15px;
+      line-height: 24px;
+      font-family: "GOTHAPROREG";
+      font-size: 20px;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      text-align: center;
+      &:last-child {
+        cursor: pointer;
+        position: relative;
+        color: #fff;
+        line-height: 25px;
+        background: $gold;
+        font-size: 16px;
+        transition: all 0.3s;
+        border-color: $gold;
+        overflow: hidden;
+        position: relative;
+        .fa-search {
+          position: absolute;
+          left: 40px;
+          top: 22px;
+          transition: left 0.3s;
+        }
+        input {
+          display: inline;
+          outline: 0;
+          width: 30%;
+          background: $gold;
+          border: 0;
+          border-bottom: 1px solid $gold;
+          line-height: 22px;
+          @include placeholder(#fff);
+          transition: all 0.3s;
+          pointer-events: none;
+        }
+        button {
+          display: inline;
+          float: right;
+          border: 0;
+          padding: 0;
+          background: $gold;
+          outline: 0;
+          transition: all 0.3s;
+          color: #fff;
+          opacity: 0;
+          z-index: -1;
+          width: 25px;
+        }
+        &:hover, &.active {
+          background: #222;
+          color: $gold;
+          transition: all 0.3s;
+          .fa-search {
+            left: -60px;
+            transition: left 0.3s;
+          }
+          input {
+            background: $black;
+            color: $gold;
+            border-bottom: 1px solid $gold;
+            width: 60%;
+            @include placeholder($gold);
+            transition: all 0.3s;
+            pointer-events: all;
+          }
+          button {
+            color: $gold;
+            background: $black;
+            transition: all 0.3s;
+            opacity: 1;
+            z-index: 1;
+            width: 25px;
+          }
+        }
+      }
+      a {
+        color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+  .main-part {
+    background: center center url('../img/blog-background.jpg') no-repeat;
+    height: 600px;
+    background-size: cover;
+    .bread-crumbs {
+      text-align: center;
+      margin-top: 0;
+      padding-top: 30px;
+      cursor: default;
+      user-select: none;
+      & > * {
+        color: #fff;
+      }
+      a {
+        @include link;
+      }
+    }
+    &-title {
+      margin-top: 150px;
+      text-align: center;
+      color: #fff;
+      user-select: none;
+      font-size: 48px;
+      line-height: 70px;
+      font-family: "INTRO";
+    }
+  }
+  .functional-part {
+    .pagination {
+      margin: 20px calc(50% - 30px) 20px;
+    }
+  }
+}

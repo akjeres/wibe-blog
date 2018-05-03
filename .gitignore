@@ -1,0 +1,11 @@
+.idea
+*.*~
+package-lock.json
+send.php
+node_modules
+data/css/variables.css
+data/css/media.css
+data/css/main.css
+data/css/header.css
+data/css/footer.css
+data/css/media-*.css

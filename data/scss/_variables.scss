@@ -1,0 +1,33 @@
+@mixin link {
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
+}
+
+$bkg: #E5E5E5;
+$gold: #B19A74;
+$black: #222;
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color:$color;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &::-moz-placeholder {
+    color:$color;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:-moz-placeholder {
+    color:$color;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  &:-ms-input-placeholder {
+    color:$color;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}

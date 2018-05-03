@@ -1,0 +1,18 @@
+@import "_variables";
+
+
+@media (max-width: 1170px) {
+  @import "_media-1170";
+}
+
+@media (max-width: 991px) {
+  @import "_media-991";
+}
+
+@media (max-width: 768px) {
+  @import "_media-768";
+}
+
+@media (max-width: 600px) {
+  @import "_media-600";
+}

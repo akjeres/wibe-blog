@@ -1,0 +1,209 @@
+@import "_variables";
+
+  .content{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .h1{
+    margin: 0;
+    font-size: 30px;
+    margin-left: 100px;
+  }
+  #head{
+    height: 80px;
+    background-color: #222;
+  }
+  #head .content{
+    height: 100%;
+  }
+  #h_logo{
+    top: 35px;
+    left: -15px;
+    width: 140px;
+    height: 25px;
+    position: absolute;
+    background-image: url(/data/img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  #h_button{
+    right: 0;
+    top: 20px;
+    color: #fff;
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: solid 1px #b39c72;
+    transition: all .3s;
+  }
+  #h_button:hover{
+    color: #000;
+    background: #b39c72;
+    border: solid 1px #b39c72;
+  }
+  #h_burger{
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    right: 160px;
+    cursor: pointer;
+    padding: 14px 20px;
+    position: absolute;
+  }
+  .hb_list{
+    width: 20px;
+    height: 2px;
+    background: #b39c72;
+  }
+  .hb_list:nth-child(even){
+    margin: 4px 0;
+  }
+  #hh_h1{
+    top: 50%;
+    left: 100px;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+  #hh_h2{
+    left: 100px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    position: absolute;
+    top: calc(50% + 40px);
+    font-family: 'GOTHAPROREGLIGHT';
+  }
+  #h_info{
+    right: 0;
+    bottom: 0;
+    width: 152px;
+    position: absolute;
+  }
+  .hi_list{
+    color: #fff;
+    font-size: 40px;
+    line-height: 30px;
+  }
+  .hil_description{
+    width: 100%;
+    font-size: 10px;
+    line-height: 10px;
+    display: inline-block;
+    font-family: 'GOTHAPROREGLIGHT';
+  }
+  #h_line{
+    width: 2px;
+    height: 47px;
+    bottom: 23px;
+    overflow: hidden;
+    position: absolute;
+    background: #b39c72;
+    left: calc(50% - 1px);
+  }
+  #h_line:after{
+    content: "";
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    display: inline-block;
+    animation: h_line_anim 2s infinite;
+  }
+  @keyframes h_line_anim{
+    from{
+      height: 0;
+    }
+    40%{
+      top: 0;
+      bottom: auto;
+      height: 100%;
+    }
+    41%{
+      top: auto;
+      bottom: 0;
+    }
+    60%{
+      top: auto;
+      bottom: 0;
+      height: 100%;
+    }
+    to{
+      top: auto;
+      height: 0;
+      bottom: 0;
+    }
+  }
+  @media (max-width:1200px){
+    .h1{
+      margin-left: 0;
+      font-size: 20px;
+    }
+    #head{
+      height: 100vh;
+    }
+    .content{
+      margin: 0 20px;
+      position: relative;
+      display: inline-block;
+      width: calc(100% - 40px);
+    }
+    #h_logo{
+      left: 50%;
+      top: 20px;
+      transform: translateX(-50%);
+    }
+    #h_button{
+      top: auto;
+      bottom: 0;
+      left: -20px;
+      border: none;
+      font-size: 18px;
+      background: #b39c72;
+      width: calc(100% + 40px);
+    }
+    #h_info{
+      left: -20px;
+      bottom: 40px;
+      display: flex;
+      width: calc(100% + 40px);
+      justify-content: space-between;
+    }
+    #h_line{
+      height: 60px;
+      display: none;
+    }
+    .hi_list{
+      width: 90px;
+      float: left;
+      font-size: 30px;
+      margin-left: 20px;
+      display: inline-block;
+    }
+    #h_head{
+      left: 0;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-70%);
+    }
+    #hh_h1,#hh_h2{
+      top: auto;
+      left: auto;
+      transform: none;
+      position: static;
+    }
+    #h_button:hover{
+      border: none;
+    }
+  }

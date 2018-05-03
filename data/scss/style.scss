@@ -1,0 +1,38 @@
+@import "_variables";
+
+@font-face{
+  font-family: 'GOTHAPROREG';
+  src: url('/data/font/GOTHAPROREG.OTF');
+}
+@font-face{
+  font-family: 'GOTHAPROBOLD';
+  src: url('/data/font/GOTHAPROBOLD.OTF');
+}
+@font-face{
+  font-family: 'GOTHAPROREGLIGHT';
+  src: url('/data/font/GOTHAPROREGLIGHT.TTF');
+}
+@font-face{
+  font-family: 'INTRO';
+  src: url('/data/font/INTRO.OTF');
+}
+body,div,section{
+  margin: 0;
+  padding: 0;
+}
+*{
+  font-family: 'GOTHAPROREGLIGHT';
+}
+h1,h2,h3,h4,h5,h6,.intro_font{
+  font-family: 'INTRO';
+}
+
+/*html {
+  height: 100vw;
+}*/
+
+@import "_modal";
+@import "_header";
+@import "_main";
+@import "_footer";
+@import "_media";

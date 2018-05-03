@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WIBE | Блог</title>
+	<link rel="stylesheet" href="data/css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<style>
+	#modal_thanks h3 {
+		font-size: <?php if(isset($_GET['name'])&&$_GET['name']!=''){echo"25px";}else{echo"40px";}?>;
+	}
+</style>
+	<section id="modal">
+		<h3>Оставьте свой номер</h3>
+		<p id="m_sub_text">И мы перезвоним Вам<br>в течение нескольких минут</p>
+		<form action="/send.php" method="POST" id="ostavte_zayavku">
+			<input type="hidden" name="head" value="Мы перезвоним Вам в течении нескольких минут">
+			<input type="tel" id="m_phone" name="phone" placeholder="+38(___) ___-____" required>
+			<input type="submit" id="m_button" class="intro_font" value="оставить">
+		</form>
+		<p id="m_info">*Ваши данные никогда не будут переданы 3-м лицам</p>
+		<div id="m_close"></div>
+	</section>
+	<section id="modal_thanks" class="<?php if(isset($_GET['thanks']))echo"active";?>">
+	<h3>
+		<?php
+			$name=$_GET['name'];
+			if(isset($name)&&$name!=''){echo"$name,<br>cпасибо";}else{echo"Спасибо";}
+		?><br>за заявку</h3>
+	<p id="m_t_sub_text">Мы свяжемся с Вами в<br>течение нескольких минут</p>
+	<div id="m_t_close"></div>
+	</section>
+	<header>
+		<section id="head">
+			<div class="content">
+				<div id="h_top">
+					<a id="h_logo" href="./"></a>
+					<!-- <div id="h_burger">
+                        <div class="hb_list"></div>
+                        <div class="hb_list"></div>
+                        <div class="hb_list"></div>
+                    </div> -->
+					<div id="h_button" class="intro_font">Перезвоните</div>
+				</div>
+			</div>
+		</section>
+	</header>
+	<main>
+		<div class="whole-width submenu">
+			<div class="content row">
+				<div class="col-md-2 submenu-item"><a href="#">Рубрика 1</a></div>
+				<div class="col-md-2 submenu-item"><a href="#">Рубрика 2</a></div>
+				<div class="col-md-2 submenu-item"><a href="#">Рубрика 3</a></div>
+				<div class="col-md-2 submenu-item"><a href="#">Рубрика 4</a></div>
+				<div class="col-md-2 submenu-item"><a href="#">Рубрика 5</a></div>
+				<form class="col-md-2 submenu-item search" action="" id="blog-search-form" method="post">
+					<i class="fas fa-search"></i>
+					<input type="text" placeholder="Поиск">
+					<button type="submit"><i class="fas fa-arrow-right"></i></button>
+				</form>
+			</div>
+		</div>
+		<div class="whole-width main-part">
+			<div class="content">
+				<h4 class="bread-crumbs">
+					<a href="./">Главная</a>&nbsp;&nbsp;&nbsp;<span>Блог</span>
+				</h4>
+				<h2 class="main-part-title">
+					Блог<br>компании WIBE
+				</h2>
+			</div>
+		</div>
+		<div class="content functional-part">
+			<div></div>
+			<div></div>
+			<ul class="pagination">
+				<li class="pagination-navigation left">
+					<div class="top-part"></div>
+					<div class="bottom-part"></div>
+				</li>
+				<li class="pagination-page">1</li>
+				<li class="pagination-page">2</li>
+				<li class="pagination-page active">3</li>
+				<li class="pagination-page">4</li>
+				<li class="pagination-page">&hellip;</li>
+				<li class="pagination-navigation right">
+					<div class="top-part"></div>
+					<div class="bottom-part"></div>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer id="footer">
+		<div class="content">
+			<div id="f_row">
+				<a href="./" id="f_logo"></a>
+				<div id="f_text">
+					Мы не просто делаем сайты и настраиваем рекламу<br>
+					Мы создаем сильные бренды, которые становятся лидерами в своей отрасли
+				</div>
+				<div id="f_button" class="intro_font">Перезвоните</div>
+				<a id="f_one_row_contacts" href="mailto: info@wibe.team">info@wibe.team</a>
+			</div>
+			<div id="f_row_two">
+				<div id="f_two_row_contacts_map">Украина, Одесса<br>ул. Юрия Олеши, 8. Офис 3</div>
+				<a href="./policy" id="sequrity">Политика конфиденциальности</a>
+				<div id="f_two_row_contacts_phone">
+					<a href="tel:+380934883048">+38(093)488 30 48</a>
+					<a href="tel:+380487017146">+38(048)701  71  46</a>
+				</div>
+			</div>
+			<div id="f_row_three">
+				<a href="https://www.facebook.com/wibe.production/" target="_blank" class="f_social" id="fs_facebook"></a>
+				<a href="https://www.behance.net/tarasenkovfe3b" target="_blank" class="f_social" id="fs_instagram"></a>
+				<a href="https://www.instagram.com/wibeteam/" target="_blank" class="f_social" id="fs_linkein"></a>
+				<a href="https://www.linkedin.com/company/11361206/" target="_blank" class="f_social" id="fs_behance"></a>
+			</div>
+		</div>
+	</footer>
+	<script src="data/js/script.js"></script>
+	<script>
+		$('#h_button,#f_button').click(function(){
+			$('#modal').addClass('active');
+		});
+		$('#m_close').click(function(){
+			$('#modal').removeClass('active');
+		});
+		$('#m_t_close').click(function(){
+			$('#modal_thanks').removeClass('active');
+			history.pushState(null,null,'/');
+		});
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+	<script>
+		$("input[type='tel']").mask("+<?php echo($ru?'7':'38');?>(999) 999-9999");
+	</script>
+</body>
+</html>
